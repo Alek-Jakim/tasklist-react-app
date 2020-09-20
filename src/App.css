@@ -1,38 +1,172 @@
-.App {
+/*Main Styling*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Font Used*/
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
+.header-text {
+  font-weight: bolder;
+  color: var(--dark-purple);
+}
+
+.title-text {
+  font-size: 2.5rem;
+  padding: 15px 0;
+  color: var(--dark-purple);
+  margin-bottom: 5px;
+}
+/*Variables*/
+
+:root {
+  --ice-cold:  #a0d2eb;
+  --freeze-purple: #e5eaf5;
+  --medium-purple: #d0bdf4;
+  --purple-rain:  #6b4f88;
+  --heavy-purple: #a28089;
+  --dark-purple: #2e2736;
+}
+
+body {
+  background: linear-gradient(#a0d2eb, #e5eaf5, #d0bdf4);
+  color: #000;
+  height: 100vh;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Task Input*/
+
+.card {
+  min-width: 900px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  width: 50%;
+  margin: 5px auto;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  background: var(--dark-purple);
+  color: var(--freeze-purple);
+  border-radius: 3px;
+  outline: none;
+}
+.edit {
+  width: 50%;
+  margin: 5px auto;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  background: var(--medium-purple);
+  color: var(--dark-purple);
+  border-radius: 3px;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn:hover {
+  color: var(--ice-cold);
+}
+
+.btn:active {
+  transform: scale(0.995);
+}
+
+.form-control{
+  width: 100%;
+  margin: 20px auto;
+  position: relative;
+}
+
+.form-control i {
+  position: absolute;
+  color: var(--freeze-purple);
+  background: var(--dark-purple );
+  font-size: 26px;
+  height: 100%;
+}
+
+.icon {
+  padding: 10px; 
+  text-align: center;
+}
+
+.input-field {
+  width: 50%;
+  padding: 10px 50px; 
+  text-align: start; 
+  outline: none;
+  font-size: 1.2rem;
+}
+
+/*TaskList and Task Item*/
+
+.btn-clear {
+  background: var(--dark-purple);
+  color: var(--freeze-purple);
+}
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.task-title {
+  border-top: 1px dotted var(--dark-purple);
+  margin: 20px auto;
+  margin-top: 40px;
+  font-size: 2rem;
+  color: var(--dark-purple);
+  padding: 15px 20px;
+  width: 50%;
+}
+
+.list-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 50%;
+  padding: 10px 15px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.item-title {
+  text-align: center;
+  font-size: 1.2rem;
+  padding-top: 3px;
+  color: var(--dark-purple);
+}
+
+.item-edit, .item-delete {
+  margin: 0 10px;
+  cursor: pointer;
 }
